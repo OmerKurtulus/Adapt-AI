@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hexagon {
+  width: 80px;
+  height: 80px;
+  background: rgba(59, 212, 203, 0.03);
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(59, 212, 203, 0.1);
+  margin: -10px;
+}
+
+.hexagon:hover {
+  background: rgba(59, 212, 203, 0.15);
+  border-color: rgba(59, 212, 203, 0.5);
+  box-shadow: 0 0 20px rgba(59, 212, 203, 0.3);
+  z-index: 10;
+}
+
+.hexagon-grid {
+  position: fixed;
+  inset: -20%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 40px);
+  grid-gap: 0;
+  padding: 2rem;
+}
+
+.hexagon-row {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: -20px;
+}
+
+.hexagon-row:nth-child(even) {
+  transform: translateX(40px);
+}
+
+.glass-effect {
+  background: rgba(16, 19, 29, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 212, 203, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-effect:hover {
+  border-color: rgba(59, 212, 203, 0.2);
+  box-shadow: 0 8px 32px rgba(59, 212, 203, 0.1);
+}
+
+body {
+  @apply bg-[#10131d] text-gray-100 antialiased;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom right, #10131d, #151b2d);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#10131d];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full;
+  background: rgba(59, 212, 203, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 212, 203, 0.3);
+}
+
+input, textarea, select {
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(59, 212, 203, 0.1);
+}
+
+button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
