@@ -224,6 +224,6 @@ If you encounter any issues or have questions:
 ---
 
 <div align="center">
-  <p>Made with ❤️ by <a href="https://github.com/yourusername">Your Name</a></p>
+  <p>Made with ❤️ by <a href="https://github.com/yourusername">OmerKurtulus</a></p>
   <p>⭐ Star this repository if you find it helpful!</p>
 </div>
